@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -n "./, ../, "; (ls -1pa | grep "/$" | tail -n +3; ls -1pa | grep -v "/$") | LC_ALL=C sort -k1.1,1.1d -k1.2 | tr '\n' ','; echo
+{ printf './, ../,'; ls -1a | grep -E '^\.+$' | grep -v '^\.\/\.\.$' | tr '\n' ',' | sed 's/,$/,\//' && ls -1a | grep -E '^[0-9A-Za-z]' | sort | tr '\n' ',' | sed 's/,$/\n/'; }
