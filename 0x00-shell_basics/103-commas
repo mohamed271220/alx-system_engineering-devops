@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -mp --group-directories-first
+(echo "./"; echo "../"; ls -1p | grep "/$" | sort --dictionary-order; ls -1p | grep -v "/$" | sort --dictionary-order) | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/, /g'
