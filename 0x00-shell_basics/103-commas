@@ -1,2 +1,2 @@
 #!/bin/bash
-(echo "./"; echo "../"; ls -1p | grep "/$" | sort --dictionary-order; ls -1p | grep -v "/$" | sort --dictionary-order) | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/, /g'
+echo -n "./, ../, "; (ls -1pa | grep "/$" | tail -n +3; ls -1pa | grep -v "/$") | LC_ALL=C sort -k1.1,1.1d -k1.2 | tr '\n' ','; echo
