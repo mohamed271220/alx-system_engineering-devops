@@ -1,2 +1,2 @@
 #!/bin/bash
-{ printf './, ../,'; ls -1a | grep -E '^\.+$' | grep -v '^\.\/\.\.$' | tr '\n' ',' | sed 's/,$/,\//' && ls -1a | grep -E '^[0-9A-Za-z]' | sort | tr '\n' ',' | sed 's/,$/\n/'; }
+ls -xamp
