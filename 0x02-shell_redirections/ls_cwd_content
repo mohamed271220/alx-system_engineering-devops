@@ -1,0 +1,16 @@
+total 56
+drwxrwxr-x 2 specter specter 4096 ديس 11 08:02 .
+drwxrwxr-x 6 specter specter 4096 ديس 11 07:37 ..
+-rwxrw-r-- 1 specter specter   32 ديس 11 07:39 0-hello_world
+-rwxrw-r-- 1 specter specter   28 ديس 11 07:41 1-confused_smiley
+-rwxrw-r-- 1 specter specter   28 ديس 11 07:43 2-hellofile
+-rwxrw-r-- 1 specter specter   39 ديس 11 07:46 3-twofiles
+-rwxrw-r-- 1 specter specter   35 ديس 11 07:49 4-lastlines
+-rwxrw-r-- 1 specter specter   35 ديس 11 07:49 5-firstlines
+-rwxrw-r-- 1 specter specter   40 ديس 11 07:51 6-third_line
+-rwxrw-r-- 1 specter specter   81 ديس 11 08:01 7-file
+-rwxrw-r-- 1 specter specter   36 ديس 11 08:02 8-cwd_state
+-rw-rw-r-- 1 specter specter   12 ديس 11 07:58 *\\'"Best School"'\\*$\?\*\*\*\*\*:)
+-rw-rw-r-- 1 specter specter   12 ديس 11 08:01 \*\\'"Best School"'\\*$\?\*\*\*\*\*:)
+-rw-rw-r-- 1 specter specter    0 ديس 11 08:02 ls_cwd_content
+-rw-rw-r-- 1 specter specter  920 ديس 11 07:38 README.md
