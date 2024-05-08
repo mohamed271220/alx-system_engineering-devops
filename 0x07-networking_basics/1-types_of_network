@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script answers multiple choice questions about types of networks
+
+# Answer to the question: What type of network a computer in local is connected to?
+echo "3"
+
+# Answer to the question: What type of network could connect an office in one building to another office in a building a few streets away?
+echo "2"
+
+# Answer to the question: What network do you use when you browse www.google.com from your smartphone (not connected to the Wifi)?
+echo "1"

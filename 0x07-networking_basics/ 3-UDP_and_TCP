@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script answers multiple choice questions about types of networks
+
+# Answer to the question: Which statement is correct for the TCP box:
+echo "1"
+
+# Answer to the question: Which statement is correct for the UDP box:
+echo "2"
+
+# Answer to the question: Which statement is correct for the TCP worker:
+echo "1"
