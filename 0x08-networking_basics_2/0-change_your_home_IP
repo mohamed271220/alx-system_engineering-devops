@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This script changes the IP addresses associated with localhost and facebook.com
+
+# Copy /etc/hosts to a new temporary file
+cp /etc/hosts ~/hosts.new
+
+# Print the necessary lines to the temporary file
+echo -e "127.0.0.2 localhost\n8.8.8.8 facebook.com" >> ~/hosts.new
+
+# Overwrite /etc/hosts with the temporary file
+cp -f ~/hosts.new /etc/hosts
+
+# Remove the temporary file
+rm ~/hosts.new
