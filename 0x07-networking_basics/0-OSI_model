@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 # This script answers multiple choice questions about the OSI model
 
-# Answer to the question: What is the OSI model?
-echo "2"
+echo ["2"]
 
-# Answer to the question: How is the OSI model organized?
-echo "2"
+echo "[2"]
