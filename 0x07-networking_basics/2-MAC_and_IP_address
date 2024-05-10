@@ -1,8 +1,2 @@
-#!/usr/bin/env bash
-# This script answers multiple choice questions about types of networks
-
-# Answer to the question: What is a MAC address?
-echo "2"
-
-# Answer to the question: What is an IP address?
-echo "1"
+2
+1
