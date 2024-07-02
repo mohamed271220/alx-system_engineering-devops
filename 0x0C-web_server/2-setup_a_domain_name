@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script provides the configured .tech domain name
+
+echo "getspecter.tech"
