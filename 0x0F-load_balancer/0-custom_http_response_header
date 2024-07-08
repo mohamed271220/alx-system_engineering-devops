@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Ignore SC2154 for shellcheck
+# SC2154: `hostname` is referenced but not assigned.
+
+sudo apt-get update -y
+
+sudo apt-get install -y nginx
+
+HOSTNAME=$(hostname)
+
+sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
+
+sudo sed -i "/server_name _;/a \ \ \ \ add_header X-Served-By $HOSTNAME;" /etc/nginx/sites-available/default
+
+sudo service nginx restart
+
+curl -sI 127.0.0.1 | grep X-Served-By
