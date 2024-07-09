@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/usr/bin/env bash
 # Ignore SC2154 for shellcheck
 # SC2154: `hostname` is referenced but not assigned.
 
