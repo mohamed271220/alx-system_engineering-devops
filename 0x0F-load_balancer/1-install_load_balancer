@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 sudo apt-get update -y
 sudo apt-get install -y haproxy
 sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.bak
