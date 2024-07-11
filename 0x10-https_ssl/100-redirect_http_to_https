@@ -33,19 +33,19 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-frontend clickviral-frontend
+frontend getspecter-frontend
         bind *:80
         mode http
         http-request redirect scheme https code 301 unless { ssl_fc }
         http-request set-header X_Forwarded-Proto http
-        default_backend clickviral-backend
+        default_backend getspecter-backend
 
-frontend clickviral-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/clickviral.tech.pem
+frontend getspecter-frontend-https
+        bind *:443 ssl crt /etc/haproxy/certs/www.getspecter.tech.pem
         http-request set-header X-Forwarded-Proto https
-        default_backend clickviral-backend
+        default_backend getspecter-backend
 
-backend clickviral-backend
+backend getspecter-backend
         balance roundrobin
-        server 151666-web-01 100.26.222.128:80 check
-        server 151666-web-02 54.236.33.232:80 check
+        server 350444-web-01 100.26.222.128:80 check
+        server 350444-web-02 54.236.33.232:80 check
