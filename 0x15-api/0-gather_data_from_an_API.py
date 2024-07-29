@@ -31,13 +31,15 @@ def get_employee_todos(employee_id):
 def print_completed_tasks(user, todos):
     """Prints the completed tasks for the employee."""
     completed = [t.get("title") for t in todos if t.get("completed") is True]
-    print(f"Employee {user.get('name')} is done with tasks({len(completed)}/{len(todos)}):")
+    print(f"Employee {user.get('name')} has completed {len(completed)} out of "
+          f"{len(todos)} tasks:")
     for task in completed:
         print(f"\t {task}")
 
 
 def main():
-    """Main function to orchestrate the fetching and printing of employee task data."""
+    """Main function to orchestrate the fetching
+    and printing of employee task data."""
     employee_id = sys.argv[1]
     user = get_employee_info(employee_id)
     todos = get_employee_todos(employee_id)
