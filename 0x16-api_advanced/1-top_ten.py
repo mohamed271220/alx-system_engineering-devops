@@ -17,14 +17,13 @@ def top_ten(subreddit):
     '''
     headers = {"User-Agent": "Python/requests:subreddit.\
         subscriber.count:v1.0 (by /u/specter)"}
-    url = requests.get('https://www.reddit.com/r/{}/hot/.json?limit=10'
-                       .format(subreddit), headers=headers).json()
-    try:
-        for post in url.get('data').get('children'):
-            print(post.get('data').get('title'))
-    except Exception:
+    url = f'https://www.reddit.com/r/{subreddit}/hot/.json?limit=10'
+    response = requests.get(url, headers=headers, allow_redirects=False)
+
+    if response.status_code != 200:
         print(None)
+        return
 
-
-if __name__ == "__main__":
-    top_ten(argv[1])
+    data = response.json().get('data', {}).get('children', [])
+    for post in data:
+        print(post.get('data', {}).get('title'))
