@@ -15,8 +15,7 @@ def top_ten(subreddit):
         If the subreddit does not exist or an error occurs,
         it prints None.
     '''
-    headers = {"User-Agent": "Python/requests:subreddit.\
-        subscriber.count:v1.0 (by /u/specter)"}
+    headers = {"User-Agent": "my-app/0.0.1"}
     url = f'https://www.reddit.com/r/{subreddit}/hot/.json?limit=10'
     response = requests.get(url, headers=headers, allow_redirects=False)
 
@@ -25,5 +24,9 @@ def top_ten(subreddit):
         return
 
     data = response.json().get('data', {}).get('children', [])
-    for post in data:
+    for post in data[:10]:
         print(post.get('data', {}).get('title'))
+
+
+if __name__ == "__main__":
+    top_ten(argv[1])
