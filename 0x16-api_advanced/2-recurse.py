@@ -8,8 +8,10 @@ import requests
 
 def recurse(subreddit, hot_list=[], after="", count=0):
     """
-    Fetches and returns a list of titles of all hot posts for a given subreddit.
-    If the subreddit does not exist or an error occurs, it returns None.
+    Fetches and returns a list of titles of all hot posts
+    for a given subreddit.
+    If the subreddit does not exist or an error occurs,
+    it returns None.
     """
     if hot_list is None:
         hot_list = []
