@@ -29,6 +29,7 @@ def top_ten(subreddit):
     else:
         # If the subreddit is invalid or the request failed, print None
         print(None)
+        return
 
 
 if __name__ == "__main__":
