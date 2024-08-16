@@ -12,10 +12,8 @@ def recurse(subreddit, hot_list=[], after="", count=0):
     If the subreddit does not exist or an error occurs, it returns None.
     """
     url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
-    headers = {
-        "User-Agent": "0x16-api_advanced:project:\
-            v1.0.0 (by /u/firdaus_cartoon_jr)"
-    }
+    headers = {"User-Agent": "Python/requests:subreddit.\
+        subscriber.count:v1.0 (by /u/specter)"}
     params = {
         "after": after,
         "count": count,
