@@ -16,13 +16,12 @@ def top_ten(subreddit):
         it prints None.
     '''
     user = {'User-Agent': 'Lizzie'}
-    url = f'https://www.reddit.com/r/{subreddit}/hot/.json?limit=10'
+    url = requests.get('https://www.reddit.com/r/{}/hot/.json?limit=10'
+                       .format(subreddit), headers=user).json()
     try:
-        response = requests.get(url, headers=user).json()
-        posts = response.get('data', {}).get('children', [])
-        for post in posts:
-            print(post.get('data', {}).get('title'))
-    except requests.exceptions.RequestException:
+        for post in url.get('data').get('children'):
+            print(post.get('data').get('title'))
+    except Exception:
         print(None)
 
 
